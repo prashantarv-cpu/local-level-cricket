@@ -1,0 +1,10 @@
+{
+  "name": "Inter School Cricket Championship",
+  "short_name": "ISCC",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f766e",
+  "description": "Live scoring and tournament management for Inter School Cricket Championship",
+  "icons": []
+}
