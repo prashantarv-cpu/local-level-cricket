@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ne">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f766e">
+<title>Inter School Cricket Championship</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+</head>
+<body>
+<header class="top">
+  <div><b>🏏 Inter School Cricket Championship</b><small id="status">Offline/Loading…</small></div>
+  <nav>
+    <button data-page="live">Live</button>
+    <button data-page="tournament">Tournament</button>
+    <button data-page="scorer">Scorer</button>
+    <button data-page="admin">Admin</button>
+    <button data-page="stats">Stats</button>
+  </nav>
+</header>
+
+<main>
+<section id="page-live" class="page">
+<h2>🔴 Live Matches</h2>
+<div id="liveMatches" class="grid"></div>
+</section>
+
+<section id="page-tournament" class="page hidden">
+<h2>🏆 Tournament</h2>
+<div class="card">
+  <label>Tournament <select id="tournamentSelect"></select></label>
+  <button id="refreshTournament">Refresh</button>
+</div>
+<div id="fixtureList"></div>
+<div id="pointsTable"></div>
+</section>
+
+<section id="page-scorer" class="page hidden">
+<h2>🎯 Scorer Console</h2>
+<div class="card">
+  <label>Match <select id="scoreMatch"></select></label>
+  <button id="loadScore">Load</button>
+</div>
+<div id="scoreConsole"></div>
+</section>
+
+<section id="page-admin" class="page hidden">
+<h2>⚙️ Admin</h2>
+<div class="tabs">
+<button data-admin="setup">Tournament</button>
+<button data-admin="teams">Schools/Players</button>
+<button data-admin="fixtures">Fixtures</button>
+<button data-admin="users">Session</button>
+</div>
+<div id="adminContent"></div>
+</section>
+
+<section id="page-stats" class="page hidden">
+<h2>📊 Statistics</h2>
+<div id="statsContent"></div>
+</section>
+</main>
+
+<footer>Inter School Cricket Championship • Live scoring • PWA</footer>
+<script src="app.js"></script>
+</body>
+</html>
